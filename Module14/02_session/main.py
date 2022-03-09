@@ -1,4 +1,3 @@
-
 print("Введите первую точку")
 x1 = float(input('X: '))
 y1 = float(input('Y: '))
@@ -14,8 +13,7 @@ if x_diff != 0 and y_diff != 0:
     print("Уравнение прямой, проходящей через эти точки:")
     print("y = ", k, " * x + ", b)
 else:
-    k = 0
-    b = y2 - k * x2
-    print("Уравнение прямой, проходящей через эти точки:")
-    print("y =", b)
-
+    if x_diff == 0:
+        print('x =', x1)
+    elif y_diff == 0:
+        print('y =', y1)
