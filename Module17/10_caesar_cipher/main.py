@@ -1,6 +1,7 @@
 def caesar(text, shift):
     alphabet = 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя'
-    answer = [(alphabet[(alphabet.index(symbol) + shift) % 33] if symbol != ' ' else ' ') for symbol in text]
+
+    answer = [(alphabet[(alphabet.index(symbol) + shift) % 33] if symbol in alphabet else symbol) for symbol in text]
     new_str = ''
     for i_char in answer:
         new_str += i_char
