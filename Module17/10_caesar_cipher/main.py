@@ -14,3 +14,4 @@ step = int(input('Введите сдвиг: '))
 
 answer_str = caesar(text, step)
 print('Зашифрованное сообщение:', answer_str)
+
