@@ -33,4 +33,4 @@ transl_1 = transl_1(text)
 answer = transl_2(transl_1)
 
 
-print(answer.replace('/', '.'))
+print(answer.replace('/', '\n'))
