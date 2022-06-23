@@ -43,6 +43,45 @@ data = {
         }
     ]
 }
+list_keys = list()
+list_val = list()
+
+for i in data.keys():
+    list_keys.append(i)
+for i_eth in data['ETH'].keys():
+    list_keys.append(i_eth)
+for i_tok_1 in data['tokens'][0].keys():
+    list_keys.append(i_tok_1)
+for i_tok_1_2 in data['tokens'][0]['fst_token_info'].keys():
+    list_keys.append(i_tok_1_2)
+for i_tok_2_1 in data['tokens'][1].keys():
+    list_keys.append(i_tok_2_1)
+for i_tok_2_2 in data['tokens'][1]['sec_token_info'].keys():
+    list_keys.append(i_tok_2_2)
 
 
-# TODO здесь писать код
+for i in data.values():
+    list_val.append(i)
+for i_eth in data['ETH'].values():
+    list_val.append(i_eth)
+for i_tok_1 in data['tokens'][0].values():
+    list_val.append(i_tok_1)
+for i_tok_1_2 in data['tokens'][0]['fst_token_info'].values():
+    list_val.append(i_tok_1_2)
+for i_tok_2_1 in data['tokens'][1].values():
+    list_val.append(i_tok_2_1)
+for i_tok_2_2 in data['tokens'][1]['sec_token_info'].values():
+    list_val.append(i_tok_2_2)
+
+
+print('Список ключей: ', list_keys)
+print('\nСписок значений', list_val)
+
+data['ETH']['total_diff'] = 100
+data['tokens'][0]['fst_token_info']['name'] = 'doge'
+memory = data['tokens'][0].pop('total_out')
+data['tokens'][1].pop('total_out')
+data['ETH']['total_out'] = memory
+data['tokens'][1]['sec_token_info']['total_price'] = data['tokens'][1]['sec_token_info'].pop('price')
+
+
