@@ -20,4 +20,11 @@ a.extend(c)
 print('Кол-во цифр 3 при втором объединении:', a.count(3))
 print('Итоговый список:', a)
 
+for i in range(len(a)):
+    if func(a):
+        a.remove(5)
+
+a.extend(c)
+print('Кол-во цифр 3 при втором объединении:', a.count(3))
+print('Итоговый список:', a)
 # TODO переписать программу
