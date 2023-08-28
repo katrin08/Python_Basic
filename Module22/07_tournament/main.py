@@ -26,7 +26,7 @@ def func_save(sort_list):
     second_tour.close()
 
 
-file_path = os.path.abspath(os.path.join('..', 'first_tour.txt'))
+file_path = os.path.abspath('first_tour.txt')
 second_list = []
 func_first_tour(file_path)
 

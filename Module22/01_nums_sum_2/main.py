@@ -2,9 +2,10 @@ def func_open(file_name):
     numbers_sum = 0
     file_num = open(file_name, 'r', encoding='utf-8')
     for i_line in file_num:
-        clear_line = i_line.strip()
-        if clear_line:
-            numbers_sum += int(clear_line)
+        data = i_line.split()
+        if data:
+            for elem in data:
+                numbers_sum += int(elem)
     file_num.close()
 
     return numbers_sum

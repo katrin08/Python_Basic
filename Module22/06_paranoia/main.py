@@ -19,7 +19,7 @@ def cipher(path, file):
                     else:
                         txt += alphabet[index]
 
-        func_save('\n'+ txt)
+        func_save(txt + '\n')
     text_file.close()
 
 def func_save(txt):
@@ -31,11 +31,11 @@ def func_save(txt):
 
 alphabet = list('abcdefghijklmnopqrstuvwxyz')
 file = 'text.txt'
-path_file = os.path.abspath(os.path.join('..', file))
+path_file = os.path.abspath(file)
 
 cipher(path_file, file)
 
-print('\nСодержимое файла cipher_text.txt:', end='')
+print('\nСодержимое файла cipher_text.txt:')
 answer = open(os.path.abspath('cipher_text.txt'), 'r')
 for line in answer:
     print(line, end='')
